@@ -1,4 +1,4 @@
-### Technical interview for BlueWolf
+### Coding Exercise
 
 This repo is written in **Ruby** language. **RSpec** is used for testing.
 
