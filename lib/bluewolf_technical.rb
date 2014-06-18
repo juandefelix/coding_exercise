@@ -19,12 +19,12 @@ end
 
 
 def first_non_repeating string                            # If a character is not repeated, you won't
-  sorted_array = string.downcase.chars                    # find it in the remaining characters.
+  chars_array = string.downcase.chars                     # find it in the remaining characters.
                                                           # We return the first case.
-  return nil if sorted_array.empty?
+  return nil if chars_array.empty?
 
-  sorted_array.each_with_index do |letter, index|
-    array_copy = sorted_array.dup
+  chars_array.each_with_index do |letter, index|
+    array_copy = chars_array.dup
     array_copy.delete_at index
 
     return letter unless array_copy.include?(letter)
