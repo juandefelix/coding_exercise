@@ -1,8 +1,8 @@
 require 'bluetechnical'
 
-# ---------------------- #
-# | find_duplicate tests #
-# ---------------------- #
+# ------------------------
+# | find_duplicate tests |
+# ------------------------
 
 describe "method find_duplicate" do
 
@@ -27,7 +27,7 @@ describe "method find_duplicate" do
     expect(find_duplicate(num_ary)).to be >= 1
   end
 
-  context "works fine with border values" do
+  context "returns the right result with border values" do
     it 'like 1' do
       num_ary = [1, 1, 3, 6, 34, 67, 23453].shuffle
 
@@ -47,9 +47,9 @@ describe "method find_duplicate" do
 end
 
 
-# --------------------------- #
-# | first_non_repeating tests #
-# --------------------------- #
+# -----------------------------
+# | first_non_repeating tests |
+# -----------------------------
 
 
 describe "method first_non_repeating" do
@@ -88,5 +88,27 @@ describe "method first_non_repeating" do
 
   it "works with repeated letter in the second the last place" do
     expect(first_non_repeating('Clsclas')).to eq "a"
+  end
+end
+
+
+# -----------------------------
+# | first_non_repeating tests |
+# -----------------------------
+
+
+describe "method card_shuffle" do
+  let(:cards_deck) { (1..52).to_a }
+
+  it "returns an array of 52 elements" do
+    expect(card_shuffle(cards_deck).size).to eq 52
+  end
+
+  it "takes an array and should return an array" do
+    expect(card_shuffle(cards_deck).class).to eq [1, 2].class
+  end
+
+  it "should not return the same array" do
+    expect(card_shuffle(cards_deck)).to eql cards_deck
   end
 end
