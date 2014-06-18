@@ -1,4 +1,4 @@
-require 'bluetechnical'
+require 'blue_technical'
 
 # ------------------------
 # | find_duplicate tests |
